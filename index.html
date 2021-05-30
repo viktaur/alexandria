@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="./index_files/books.css">
+<script src="./index_files/booksSearcher.js.download"></script>
+<title>Books administrator</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1012.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+<header>
+<h1>Title</h1>
+</header>
+<section>
+<div id="upload">
+<h3>File uploader</h3>
+<br>
+<form method="POST" enctype="multipart/form-data">
+<label for="title">Title</label>
+<br>
+<input type="text" id="title" name="title" class="text" required="">
+<label for="author">Author</label>
+<br>
+<input type="text" id="author" name="author" class="text" required="">
+<label for="Philosophy Politics Economy Fiction">Categories</label>
+<br>
+<input class="checkbox" type="checkbox" name="category" id="Philosophy" value="Philosophy">Philosophy
+<br>
+<input class="checkbox" type="checkbox" name="category" id="Politics" value="Politics">Politics
+<br>
+<input class="checkbox" type="checkbox" name="category" id="Economy" value="Economy">Economy
+<br>
+<input class="checkbox" type="checkbox" name="category" id="Psychology" value="Psychology">Psychology
+<br>
+<input class="checkbox" type="checkbox" name="category" id="COmputerScience" value="Computer science">Computer science
+<br>
+<input class="checkbox" type="checkbox" name="category" id="Physics" value="Physics">Physics
+<br>
+<input type="checkbox" name="category" id="Fiction" value="Fiction">Fiction
+<br>
+<label for="language">Language</label>
+<br>
+<input class="checkbox" type="checkbox" name="language" value="Español">Español
+<br>
+<input class="checkbox" type="checkbox" name="language" value="English">English
+<br>
+<input class="checkbox" type="checkbox" name="language" value="Lingua Latina">Lingua Latina
+<br>
+<input class="checkbox" type="checkbox" name="language" value="Català">Català
+<br>
+<input class="checkbox" type="checkbox" name="language" value="Français">Français
+<br>
+<input type="checkbox" name="language" value="Deutsche">Deutsche
+<!-- Esto va al final del formulario -->
+<label for="file" class="button">Select file</label>
+<input id="file" name="file" type="file" style="display: none;" onchange="changedFile(this.value)" required="">
+<br>
+<input class="button" type="submit">
+</form>
+<p class="info">This website does not collect any kind of personal information from users at the time of publishing the documents.</p>
+<p class="info">A human control is setted to try to remove any file with illegal content and duplicated files.</p>
+</div>
+<div id="searcher">
+<h3>Searcher</h3>
+<br>
+<table id="searcherTable">
+<tbody><tr class="rowWhite">
+<th class="left">Title</th>
+<th>Author</th>
+<th>Category</th>
+<th>Language</th>
+<th>File class</th>
+<th class="right">Download</th>
+</tr>
+<tr>
+<td class="left"><input id="titleInput" type="text" onchange="filter(this.value)"></td>
+<td><input id="authorInput" type="text" onchange="filter(this.value)"></td>
+<td><input id="categoryInput" type="text" onchange="filter(this.value)"></td>
+<td><input id="languageInput" type="text" onchange="filter(this.value)"></td>
+<td><input id="fileClassInput" type="text" onchange="filter(this.value)"></td>
+<td class="right"></td>
+</tr>
+<tr><td class="rowWhite left">1984</td><td class="rowWhite">George Orwell</td><td class="rowWhite">Fiction</td><td class="rowWhite">Español</td><td class="rowWhite">pdf</td><td class="rowWhite right"><button class="buttonDownload"><a href="LINK AQUÍ" download="">Download</a></button></td></tr><tr></tr></tbody></table>
+</div>
+</section>
+</body>
+</html>
